@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 import { useFFmpeg } from './hooks/useFFmpeg'
 import { processAudio } from './utils/audioProcessor'
@@ -134,6 +135,7 @@ function App() {
 
   return (
     <div className="app">
+      <Analytics />
       <Header />
 
       <main className="container">
