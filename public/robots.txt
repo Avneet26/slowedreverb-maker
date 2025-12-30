@@ -1,11 +1,11 @@
 # Robots.txt for Slowed & Reverb Maker
-# https://slowed-reverb-maker.vercel.app
+# https://www.slowedreverbmaker.com
 
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://slowed-reverb-maker.vercel.app/sitemap.xml
+Sitemap: https://www.slowedreverbmaker.com/sitemap.xml
 
 # Crawl-delay (optional, be polite to crawlers)
 Crawl-delay: 1
