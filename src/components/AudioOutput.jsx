@@ -1,3 +1,5 @@
+import { AudioPlayer } from './AudioPlayer'
+
 export function AudioOutput({ audioUrl, fileName, onReset }) {
     return (
         <div className="output glass">
@@ -11,13 +13,7 @@ export function AudioOutput({ audioUrl, fileName, onReset }) {
             </div>
 
             <div className="output__player">
-                <audio
-                    controls
-                    src={audioUrl}
-                    aria-label="Processed audio preview"
-                >
-                    Your browser does not support the audio element.
-                </audio>
+                <AudioPlayer src={audioUrl} />
             </div>
 
             <div className="output__actions">
