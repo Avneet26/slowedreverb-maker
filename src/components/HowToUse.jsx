@@ -18,19 +18,19 @@ export function HowToUse() {
     ]
 
     return (
-        <section className="how-to-use">
-            <h2 className="how-to-use__title">How It Works</h2>
-            <div className="how-to-use__steps">
+        <section className="how-to-use" aria-labelledby="how-to-use-title">
+            <h2 id="how-to-use-title" className="how-to-use__title">How It Works</h2>
+            <ol className="how-to-use__steps" role="list">
                 {steps.map((step) => (
-                    <div key={step.number} className="how-to-use__step">
-                        <span className="how-to-use__number">{step.number}</span>
+                    <li key={step.number} className="how-to-use__step">
+                        <span className="how-to-use__number" aria-hidden="true">{step.number}</span>
                         <div className="how-to-use__content">
                             <h3 className="how-to-use__step-title">{step.title}</h3>
                             <p className="how-to-use__step-desc">{step.description}</p>
                         </div>
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ol>
         </section>
     )
 }

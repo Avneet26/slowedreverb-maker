@@ -619,6 +619,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .how-to-use__step {
@@ -720,6 +723,14 @@
 .footer__sub {
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.footer__copyright {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  opacity: 0.7;
+  margin-top: var(--space-2);
 }
 
 /* ===== Responsive ===== */

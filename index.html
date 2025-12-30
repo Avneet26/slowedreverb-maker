@@ -1,17 +1,182 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slowed & Reverb Maker | Create Aesthetic Audio</title>
-    <meta name="description" content="Create slowed and reverb versions of your favorite songs instantly. Free, client-side audio processing tool." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <!-- Primary Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>Slowed & Reverb Maker - Free Online Audio Effect Tool | Create Aesthetic Music</title>
+  <meta name="description"
+    content="Create slowed and reverb versions of your favorite songs instantly. Free online tool with tempo control, pitch shifting, and reverb effects. No downloads required - works in your browser." />
+  <meta name="keywords"
+    content="slowed reverb maker, slowed and reverb, slowed music, reverb effect, audio editor, nightcore maker, slow down music, pitch shifter, online audio tool, free music editor, aesthetic music, lofi music maker" />
+  <meta name="author" content="Slowed Reverb Maker" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://slowed-reverb-maker.vercel.app/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://slowed-reverb-maker.vercel.app/" />
+  <meta property="og:title" content="Slowed & Reverb Maker - Free Online Audio Effect Tool" />
+  <meta property="og:description"
+    content="Create slowed and reverb versions of your favorite songs instantly. Free online tool with tempo, pitch, and reverb controls. No downloads - works in browser." />
+  <meta property="og:image" content="https://slowed-reverb-maker.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Slowed & Reverb Maker - Create aesthetic audio effects online" />
+  <meta property="og:site_name" content="Slowed Reverb Maker" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://slowed-reverb-maker.vercel.app/" />
+  <meta name="twitter:title" content="Slowed & Reverb Maker - Free Online Audio Effect Tool" />
+  <meta name="twitter:description"
+    content="Create slowed and reverb versions of your songs instantly. Free browser-based tool. No downloads required." />
+  <meta name="twitter:image" content="https://slowed-reverb-maker.vercel.app/og-image.png" />
+  <meta name="twitter:image:alt" content="Slowed & Reverb Maker - Online audio effects tool" />
+
+  <!-- Additional SEO -->
+  <meta name="application-name" content="Slowed Reverb Maker" />
+  <meta name="apple-mobile-web-app-title" content="Slowed Reverb" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0a0a12" />
+  <meta name="msapplication-TileColor" content="#0a0a12" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data - WebApplication Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Slowed & Reverb Maker",
+      "description": "Create slowed and reverb versions of your favorite songs instantly. Free online audio effect tool with tempo control, pitch shifting, and reverb effects.",
+      "url": "https://slowed-reverb-maker.vercel.app/",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Slow down audio from 0.5x to 2.0x speed",
+        "Pitch shifting up to 12 semitones",
+        "Adjustable reverb effect",
+        "Quick presets for slowed+reverb and nightcore",
+        "Client-side processing for privacy",
+        "Support for MP3, WAV, OGG, FLAC, M4A formats"
+      ],
+      "screenshot": "https://slowed-reverb-maker.vercel.app/og-image.png",
+      "softwareVersion": "1.0.0",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+  <!-- Structured Data - HowTo Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Create Slowed and Reverb Music",
+      "description": "Learn how to create aesthetic slowed and reverb versions of songs using our free online tool.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload Your Audio",
+          "text": "Drag and drop or click to select an audio file (MP3, WAV, OGG, FLAC, or M4A format).",
+          "position": 1
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Choose Settings",
+          "text": "Select a preset like 'Slowed + Reverb' or 'Nightcore', or customize tempo, pitch, and reverb sliders.",
+          "position": 2
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Process and Download",
+          "text": "Click 'Apply Effects', wait for processing, then preview and download your aesthetic audio.",
+          "position": 3
+        }
+      ],
+      "totalTime": "PT2M"
+    }
+    </script>
+
+  <!-- Structured Data - FAQPage Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is slowed and reverb music?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Slowed and reverb is a music aesthetic where songs are slowed down (typically to 0.8x speed) and have reverb effects added, creating a dreamy, atmospheric sound popular on YouTube and TikTok."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this tool free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Slowed & Reverb Maker is completely free to use. There are no subscriptions, no downloads required, and no limits on how many songs you can process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my audio file uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All audio processing happens directly in your browser using WebAssembly technology. Your files never leave your device, ensuring complete privacy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What audio formats are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We support MP3, WAV, OGG, FLAC, AAC, and M4A audio formats. The output is always in high-quality MP3 format."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

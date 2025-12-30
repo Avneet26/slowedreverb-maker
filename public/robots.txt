@@ -1,0 +1,15 @@
+# Robots.txt for Slowed & Reverb Maker
+# https://slowed-reverb-maker.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://slowed-reverb-maker.vercel.app/sitemap.xml
+
+# Crawl-delay (optional, be polite to crawlers)
+Crawl-delay: 1
+
+# Block unnecessary paths
+Disallow: /api/
+Disallow: /.vercel/
