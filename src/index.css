@@ -108,6 +108,9 @@ body {
   background: var(--gradient-bg-base);
   min-height: 100vh;
   overflow-x: hidden;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 body::before {
@@ -151,6 +154,14 @@ h1 {
 
 p {
   color: var(--color-text-secondary);
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* ===== Animations ===== */
