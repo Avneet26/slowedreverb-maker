@@ -726,6 +726,18 @@
   margin-bottom: var(--space-2);
 }
 
+.footer__author {
+  color: var(--color-accent-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.footer__author:hover {
+  color: var(--color-accent-primary);
+  text-decoration: underline;
+}
+
 .footer__copyright {
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
