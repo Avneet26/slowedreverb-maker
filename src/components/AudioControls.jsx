@@ -59,6 +59,14 @@ export function AudioControls({
         setTempo(preset.tempo)
         setPitch(preset.pitch)
         setReverb(preset.reverb)
+
+        // Track preset selection
+        if (window.la?.track) {
+            window.la.track('click', 'preset_selected', {
+                presetId: preset.id,
+                presetName: preset.name
+            })
+        }
     }
 
     // Check if current settings match a preset

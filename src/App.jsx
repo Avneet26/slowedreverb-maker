@@ -68,6 +68,15 @@ function App() {
   const handleFileSelect = (selectedFile) => {
     setFile(selectedFile)
     setError(null)
+
+    // Track file upload
+    if (window.la?.track) {
+      window.la.track('upload', 'audio_file', {
+        fileType: selectedFile.type,
+        fileSize: selectedFile.size
+      })
+    }
+
     // Reset output if selecting a new file
     if (outputUrl) {
       URL.revokeObjectURL(outputUrl)
@@ -85,6 +94,15 @@ function App() {
     setStatus('Starting...')
     setError(null)
 
+    // Track processing start
+    if (window.la?.track) {
+      window.la.track('click', 'apply_effects', {
+        tempo,
+        pitch,
+        reverb
+      })
+    }
+
     try {
       const result = await processAudio(
         ffmpeg,
@@ -100,9 +118,23 @@ function App() {
 
       setOutputUrl(result.url)
       setOutputName(result.fileName)
+
+      // Track processing complete
+      if (window.la?.track) {
+        window.la.track('complete', 'audio_processing', {
+          tempo,
+          pitch,
+          reverb
+        })
+      }
     } catch (err) {
       console.error('Processing failed:', err)
       setError(err.message || 'An error occurred during processing')
+
+      // Track processing error
+      if (window.la?.track) {
+        window.la.track('error', 'processing_failed')
+      }
     } finally {
       setProcessing(false)
     }
@@ -119,6 +151,12 @@ function App() {
     setProgress(0)
     setStatus('')
     setError(null)
+
+    // Track reset/process another
+    if (window.la?.track) {
+      window.la.track('click', 'process_another')
+    }
+
     // Scroll back to top
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }

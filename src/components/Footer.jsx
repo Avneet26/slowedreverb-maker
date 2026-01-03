@@ -10,6 +10,11 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="footer__author"
+                    onClick={() => {
+                        if (window.la?.track) {
+                            window.la.track('click', 'author_github')
+                        }
+                    }}
                 >
                     Avneet Virdi
                 </a>

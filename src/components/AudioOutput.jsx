@@ -21,6 +21,11 @@ export function AudioOutput({ audioUrl, fileName, onReset }) {
                     href={audioUrl}
                     download={fileName}
                     className="output__btn output__btn--download"
+                    onClick={() => {
+                        if (window.la?.track) {
+                            window.la.track('click', 'download_audio')
+                        }
+                    }}
                 >
                     ⬇️ Download
                 </a>
